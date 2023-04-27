@@ -211,3 +211,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+function PageJump() {
+	var input = prompt("Please fill in your identity as' student 'or' parent ':");
+	
+	if (input == "student") {
+		window.location.href = "https://nanshenger.github.io/ICT441-RTO/services.html";
+	} else if (input == "parent") {
+		window.location.href = "https://nanshenger.github.io/ICT441-RTO/";
+	}
+}
