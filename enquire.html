@@ -28,6 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- =======================================================
   * Template Name: UpConstruction
@@ -90,7 +91,8 @@
 
 
           <div class="col-lg-6" style="width: 80%;margin: auto;">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+            <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row gy-4">
                 <div class="col-lg-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -113,7 +115,44 @@
               </div>
 
               <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+            </form> -->
+            <div class="form" id="my-form">
+              <!-- first-name -->
+              <div>
+                <label for="first-name" id="fn">First Name:</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Please enter valid letters." required>
+              </div>
+          
+              <!-- last-name -->
+              <div>
+                <label for="last-name" id="ln">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Please enter valid letters." required>
+              </div>
+          
+              <!-- phone -->
+              <div>
+                <label for="phone" id="pn">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Please enter a valid numeric number." required>
+              </div>
+          
+              <!-- gender -->
+              <div>
+                <label for="gender" id="gd">Gender:</label>
+                <select id="gender" name="gender" required>
+                  <option value="">Please select</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+          
+              <!-- enquiry -->
+              <div>
+                <label for="enquiry" id="eq">Enquiry:</label>
+                <textarea id="enquiry" name="enquiry" rows="5" placeholder="Enter your question within 150 words." required></textarea>
+              </div>
+          
+              <button onclick="Validate()">Validate</button>
+            </div>
           </div><!-- End Contact Form -->
 
         </div>
@@ -221,7 +260,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
