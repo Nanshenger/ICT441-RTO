@@ -59,8 +59,8 @@ function Validate()
     if (phoneValue === '') {
         document.getElementById("pn").innerHTML =('Phone Number: Please enter your phone number.');
         isValid = false;
-    } else if (!phoneRegex.test(phoneValue)) {
-        document.getElementById("pn").innerHTML =('Phone Number: Invalid input for phone number.');
+    } else if (!phoneRegex.test(phoneValue) || phoneValue.length < 8) {
+        document.getElementById("pn").innerHTML =('Phone Number: Only numbers and must not be less than 8 digits.');
         isValid = false;
     } else {
         document.getElementById("pn").innerHTML ='Phone Number: PASS';
